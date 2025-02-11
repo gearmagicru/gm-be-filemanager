@@ -1,0 +1,427 @@
+/*!
+ * Панель (Desk).
+ * 
+ * Модуль "Файловый менеджер".
+ * 
+ * Copyright 2015 Вeб-студия GearMagic
+ * Copyright Anton Tivonenko <anton.tivonenko@gmail.com>
+ * https://gearmagic.ru/license/
+ */
+
+/**
+ * Вкладка панели.
+ */
+#gm-filemanager-tab-body { background-color: #e7e7e7; }
+
+
+/* Заливка заднего фона сетки (см. идент. viewManager) */
+#gm-filemanager-grid-view .x-grid-view {
+    background: url("../images/watermark.svg") no-repeat calc(100% - 25px) calc(100% - 20px);
+    background-size: 100px;
+}
+
+
+/**
+ * Дерево папок.
+ */
+#gm-filemanager-tree {
+    -webkit-box-shadow: 4px 1px 6px -5px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 4px 1px 6px -5px rgba(0, 0, 0, 0.31);
+    box-shadow: 4px 1px 6px -5px rgba(0, 0, 0, 0.31);
+}
+.gm-filemanager-tree { background-color: #fafafa; }
+.gm-filemanager-tree .x-grid-body,
+.gm-filemanager-tree .x-grid-item { background-color: inherit; }
+.gm-filemanager-tree .x-grid-item-over { background-color: #e4eeeb; }
+.gm-filemanager-tree .x-grid-item-selected { background-color: #c5dace; }
+.gm-filemanager-tree .x-grid-item-focused .x-grid-cell-inner:before { display: none; }
+
+
+/**
+ * Панель инструментов.
+ */
+ .gm-filemanager-toolbar { background-color: #f5f5f5; }
+ .gm-filemanager-toolbar .x-mask { opacity: 0; }
+ .gm-filemanager-toolbar .x-toolbar-separator-horizontal { border-width: 0; }
+ /* Кнопки панели инструментов */
+ .gm-filemanager-toolbar__btn {
+     width: 38px;
+     height: 38px;
+     background-color: #ededed;
+     background-image: none;
+     border-radius: 4px;
+ }
+ .gm-filemanager-toolbar__btn.x-btn-over {
+     border-color: #68a081;
+     background: #cbe6d7;
+ }
+ .gm-filemanager-toolbar__btn.x-btn-pressed { background: #b1cebe !important; }
+ .gm-filemanager-toolbar__btn.x-btn-disabled { opacity: 0.3; }
+
+
+/**
+ * Предварительный просмотр в подсказке.
+ */
+ .gm-filemanager__celltip-icon,
+ .gm-filemanager__celltip-preview {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 180px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+    margin-top: 10px;
+ }
+ .gm-filemanager__celltip-icon {
+     height: 100px;
+ }
+
+
+/**
+ * Виджет панели отображения файлов / папок в виде списка.
+ */
+/**
+ * Элемента списка.
+ * Gm.be.filemanager.ListView.itemSelector = "..." 
+ */
+ .gm-filemanager-listview__item {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 3px;
+    padding: 1px;
+    width: 150px;
+    height: 150px;
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    font: normal 14px/16px "Roboto Condensed", helvetica, arial, verdana, sans-serif;
+    color: #878787;
+    overflow: hidden;
+}
+.gm-filemanager-listview__item.x-view-item-focused {
+    outline-style: solid !important;
+}
+/**
+ * Над элементом.
+ * Gm.be.filemanager.ListView.overItemCls = "..." 
+ */
+.gm-filemanager-listview__item_over {
+    background-color: #ededed;
+}
+/**
+ * Выделенный элемент.
+ * Gm.be.filemanager.ListView.selectedItemCls = "..." 
+ */
+ .gm-filemanager-listview__item_selected {
+    background: #eff5fb;
+    border:1px solid silver;
+    padding: 4px;
+}
+.gm-filemanager-listview__item_selected .gm-filemanager-listview__thumb {
+    background: transparent;
+}
+/* Обёртка элемента */
+.gm-filemanager-listview__wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px 40px 30px;
+}
+/* Значок элемента */
+.gm-filemanager-listview__icon {
+    position: relative;
+}
+.gm-filemanager-listview__icon img {
+    width: auto;
+    height : auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+/* Вывод изображения элемента */
+.gm-filemanager-listview__preview {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px 1px 40px 1px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.gm-filemanager-listview__preview img {
+    width: auto;
+    height : auto;
+    max-height: 100%;
+}
+/* Перекрытие значка элемента */
+.gm-filemanager-listview__overlay {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 100%;
+    height: 45%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.gm-filemanager-listview__title {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font: normal 15px/16px helvetica, arial, verdana, sans-serif;
+    padding: 0 5px 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+}
+
+
+/**
+ * Предварительный просмотр в подсказке.
+ */
+ .gm-filemanager-form__preview {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+ }
+
+
+/**
+ * Отображение ошибки в одном из полей формы.
+ */
+.gm-filemanager-error .x-form-display-field {
+    color: #ff5a4c;
+}
+
+
+/**
+ * Панель инструментов просмотра файлов.
+ */
+ /* Значок "Корневая папка" */
+ .gm-filemanager__icon-home { 
+    background-image: url("../images/toolbar/icon-home.svg"); 
+    background-size: contain;
+}
+/*.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent*/
+
+/* Значок "Парейти на уровень выше" */
+.gm-filemanager__icon-up { 
+    background-image: url("../images/toolbar/icon-up.svg"); 
+    background-size: contain;
+}
+/* Значок "Создать папку" */
+.gm-filemanager__icon-create_folder { 
+    background-image: url("../images/toolbar/icon-create_folder.svg"); 
+    background-size: contain;
+}
+/* Значок "Создать файл" */
+.gm-filemanager__icon-create_file { 
+    background-image: url("../images/toolbar/icon-create_file.svg"); 
+    background-size: contain;
+}
+/* Значок "Удалить выбранные папки / файлы" */
+.gm-filemanager__icon-delete { 
+    background-image: url("../images/toolbar/icon-delete.svg"); 
+    background-size: contain;
+}
+/* Значок "Обновить" */
+.gm-filemanager__icon-refresh { 
+    background-image: url("../images/toolbar/icon-refresh.svg"); 
+    background-size: contain;
+}
+/* Значок "Поиск папки / файла" */
+.gm-filemanager__icon-find { 
+    background-image: url("../images/toolbar/icon-find.svg"); 
+    background-size: contain;
+}
+/* Значок "Профилирование папки / файла" */
+.gm-filemanager__icon-profile_on { 
+    background-image: url("../images/toolbar/icon-profile_on.svg"); 
+    background-size: contain;
+}
+.gm-filemanager__icon-profile_off { 
+    background-image: url("../images/toolbar/icon-profile_off.svg"); 
+    background-size: contain;
+}
+/* Значок "Выделить все" */
+.gm-filemanager__icon-select { 
+    background-image: url("../images/toolbar/icon-select.svg"); 
+    background-size: contain;
+}
+/* Значок "Инвертировать выделение" */
+.gm-filemanager__icon-inselect { 
+    background-image: url("../images/toolbar/icon-inselect.svg"); 
+    background-size: contain;
+}
+/* Значок "Убрать выделение" */
+.gm-filemanager__icon-unselect { 
+    background-image: url("../images/toolbar/icon-unselect.svg"); 
+    background-size: contain;
+}
+/* Значок "Загрузить" */
+.gm-filemanager__icon-upload { 
+    background-image: url("../images/toolbar/icon-upload.svg"); 
+    background-size: contain;
+}
+/* Значок "Скачать" */
+.gm-filemanager__icon-download { 
+    background-image: url("../images/toolbar/icon-download.svg"); 
+    background-size: contain;
+}
+/* Значок "Архивировать" */
+.gm-filemanager__icon-compress { 
+    background-image: url("../images/toolbar/icon-compress.svg"); 
+    background-size: contain;
+}
+/* Значок "Разархивировать" */
+.gm-filemanager__icon-extract { 
+    background-image: url("../images/toolbar/icon-extract.svg"); 
+    background-size: contain;
+}
+/* Значок "Переименовать" */
+.gm-filemanager__icon-rename { 
+    background-image: url("../images/toolbar/icon-rename.svg"); 
+    background-size: contain;
+}
+/* Значок "Редактировать файл" */
+.gm-filemanager__icon-edit { 
+    background-image: url("../images/toolbar/icon-edit.svg"); 
+    background-size: contain;
+}
+/* Значок "Просмотреть файл" */
+.gm-filemanager__icon-view { 
+    background-image: url("../images/toolbar/icon-view.svg"); 
+    background-size: contain;
+}
+/* Значок "Права доступа" */
+.gm-filemanager__icon-permissions { 
+    background-image: url("../images/toolbar/icon-permissions.svg"); 
+    background-size: contain;
+}
+/* Значок "Копировать выбранные папки / файлы" */
+.gm-filemanager__icon-copy { 
+    background-image: url("../images/toolbar/icon-copy.svg"); 
+    background-size: contain;
+}
+/* Значок "Вырезать" */
+.gm-filemanager__icon-cut { 
+    background-image: url("../images/toolbar/icon-cut.svg"); 
+    background-size: contain;
+}
+/* Значок "Вставить" */
+.gm-filemanager__icon-paste { 
+    background-image: url("../images/toolbar/icon-paste.svg"); 
+    background-size: contain;
+}
+/* Значок "Информация о выбранной папке / файле" */
+.gm-filemanager__icon-attributes { 
+    background-image: url("../images/toolbar/icon-attributes.svg"); 
+    background-size: contain;
+}
+/* Значок "Сетка" */
+.gm-filemanager__icon-grid { 
+    background-image: url("../images/toolbar/icon-grid.svg"); 
+    background-size: contain;
+}
+/* Значок "Список" */
+.gm-filemanager__icon-list { 
+    background-image: url("../images/toolbar/icon-list.svg"); 
+    background-size: contain;
+}
+/* Значок "Справка" */
+.gm-filemanager__icon-info { 
+    background-image: url("../images/toolbar/icon-info.svg"); 
+    background-size: contain;
+}
+/* Значок "Настройки" */
+.gm-filemanager__icon-settings { 
+    background-image: url("../images/toolbar/icon-settings.svg"); 
+    background-size: contain;
+}
+
+
+/**
+ * Панель инструментов дерева папок.
+ */
+ /* Значок "Развернуть все папки" */
+.gm-filemanager__icon-expand { 
+    background-image: url("../images/toolbar/icon-expand.svg"); 
+    background-size: contain;
+}
+/* Значок "Свернуть все папки" */
+.gm-filemanager__icon-collapse { 
+    background-image: url("../images/toolbar/icon-collapse.svg"); 
+    background-size: contain;
+}
+
+
+/**
+ * Вид папок.
+ */
+ /* Без значка */
+ .g-tree .x-tree-icon-parent.empty { 
+    background: #fff; 
+    width: 1px;
+    height: 16px;
+}
+/* Значок "Корневая папка" */
+.g-tree .x-tree-icon-parent.gm-filemanager__icon-folder_root { 
+    background-image: url("../images/folders/icon-folder_root.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-filemanager__icon-folder_root { 
+    background-image: url("../images/folders/icon-folder_root-opened.svg"); 
+    background-size: contain;
+}
+/* Значок "Корневая папка" */
+.g-tree .x-tree-icon-parent.gm-filemanager__icon-folder_public { 
+    background-image: url("../images/folders/icon-folder_public.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-filemanager__icon-folder_public { 
+    background-image: url("../images/folders/icon-folder_public-opened.svg"); 
+    background-size: contain;
+}
+.g-tree .x-tree-icon-parent.gm-filemanager__icon-folder_vendor { 
+    background-image: url("../images/folders/icon-folder_vendor.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-filemanager__icon-folder_vendor { 
+    background-image: url("../images/folders/icon-folder_vendor-opened.svg"); 
+    background-size: contain;
+}
+.g-tree .x-tree-icon-parent.gm-filemanager__icon-folder_config { 
+    background-image: url("../images/folders/icon-folder_config.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-filemanager__icon-folder_config { 
+    background-image: url("../images/folders/icon-folder_config-opened.svg"); 
+    background-size: contain;
+}
+.g-tree .x-tree-icon-parent.gm-filemanager__icon-folder_runtime { 
+    background-image: url("../images/folders/icon-folder_runtime.svg"); 
+    background-size: contain;
+}
+.g-tree .x-grid-tree-node-expanded .x-tree-icon-parent.gm-filemanager__icon-folder_runtime { 
+    background-image: url("../images/folders/icon-folder_runtime-opened.svg"); 
+    background-size: contain;
+}
+
+
+/**
+ * Вид файлов: сетка.
+ */
+/* Заливка заднего фона сетки (см. идент. viewManager) */
+#gm-filemanager-grid .x-grid-view {
+    background: url("../images/toolbar/watermark.svg") no-repeat calc(100% - 25px) calc(100% - 20px);
+    background-size: 100px;
+}
