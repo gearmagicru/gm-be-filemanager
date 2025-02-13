@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/gearmagicru/gm-be-filemanager/refs/heads/master/assets/images/icon.svg" width="64px" height="64px" align="absmiddle"> Модуль панели управления "Файловый менеджер"
+# <img src="https://raw.githubusercontent.com/gearmagicru/gm-be-filemanager/refs/heads/main/assets/images/icon.svg" width="64px" height="64px"> Модуль панели управления "Файловый менеджер"
 
 Модуль предназначен для управление файлами и папками на стороне сервера.
 
