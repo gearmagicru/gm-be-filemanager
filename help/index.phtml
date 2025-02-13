@@ -1,0 +1,32 @@
+<?php
+/**
+ * Страница "Содержание".
+ * 
+ * Локализации по умолчанию.
+ * 
+ * Этот файл является частью модуля веб-приложения GearMagic.
+ * 
+ * @copyright Copyright (c) 2015 Веб-студия GearMagic
+ * @license https://gearmagic.ru/license/
+ */
+?>
+<article>
+    <h1>File manager</h1>
+    <div class="g-help-icon">
+        <img src="<?= $assetsUrl, '/images/icon.svg' ?>" />
+    </div>
+    <p>A file manager designed to manage files and folders on the server side. The manager will allow you to: edit, delete, upload, download, copy and paste files and folders.<p>
+
+    <h2>Содержание:</h2>
+    <ul class="g-help-list">
+        <li><a href="<?= $url('desk') ?>">File manager panel</a></li>
+        <li><a href="<?= $url('settings') ?>">File manager settings</a></li>
+        <li><a href="<?= $url('create') ?>">File / folder creation form</a></li>
+        <li><a href="<?= $url('upload') ?>">File upload form</a></li>
+        <li><a href="<?= $url('compress') ?>">File / folder archiving form</a></li>
+        <li><a href="<?= $url('extract') ?>">Form for extracting files from archive</a></li>
+        <li><a href="<?= $url('rename') ?>">File / folder name change form</a></li>
+        <li><a href="<?= $url('edit') ?>">File editing form</a></li>
+        <li><a href="<?= $url('permissions') ?>">Form for setting access rights to a file / folder</a></li>
+    </ul>
+</article>
