@@ -1,0 +1,326 @@
+[
+    {
+        "xtype": "textfield",
+        "fieldLabel": "#Root folder ID",
+        "name": "folderRootId",
+        "anchor": "100%",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "#Path to root folder",
+        "tooltip": "#Absolute path to the root folder",
+        "name": "homePath",
+        "anchor": "100%",
+        "allowBlank": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "#Base URL",
+        "tooltip": "#Used to preview images and must match the base path",
+        "name": "homeUrl",
+        "anchor": "100%",
+        "allowBlank": false
+    },
+    {
+        "xtype": "checkbox",
+        "ui": "switch",
+        "fieldLabel": "#show folders without access",
+        "name": "showUnreadableDirs",
+        "inputValue": 1,
+        "checked": true
+    },
+    {
+        "xtype": "checkbox",
+        "ui": "switch",
+        "fieldLabel": "#show VCS files",
+        "name": "showVCSFiles",
+        "inputValue": 1,
+        "checked": true
+    },
+    {
+        "xtype": "checkbox",
+        "ui": "switch",
+        "fieldLabel": "#show files and folders with a dot",
+        "name": "showDotFiles",
+        "inputValue": 1,
+        "checked": true
+    },
+    {
+        "xtype": "fieldset",
+        "title": "#Folder tree panel",
+        "layout": "column",
+        "style": "margin-top:10px",
+        "items": [
+            {
+                "layout": "anchor",
+                "columnWidth": 0.5,
+                "defaults": {
+                    "labelWidth": 240,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show folder icons",
+                        "name": "showTreeFolderIcons",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show system folder icons",
+                        "name": "showTreeSomeIcons",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show toolbar",
+                        "name": "showTreeToolbar",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "numberfield",
+                        "fieldLabel": "#number of folders to expand",
+                        "labelWidth": 210,
+                        "name": "totalExpandedFolders",
+                        "width": 300,
+                        "minValue": 50,
+                        "maxValue": 1000,
+                        "value": 1000
+                    },
+                    {
+                        "xtype": "numberfield",
+                        "fieldLabel": "#panel size",
+                        "tooltip": "#Width of the folder tree panel in pixels",
+                        "labelWidth": 210,
+                        "name": "treeWidth",
+                        "width": 300,
+                        "minValue": 150,
+                        "value": 300
+                    },
+                    {
+                        "xtype": "combo",
+                        "fieldLabel": "#panel position",
+                        "labelWidth": 210,
+                        "width": 300,
+                        "name": "treePosition",
+                        "queryMode": "local", 
+                        "displayField": "name",
+                        "valueField": "position",
+                        "editable": false,
+                        "value": "left",
+                        "store": {
+                            "fields": ["position", "name"],
+                            "data": [
+                                {"position": "left", "name": "#left"},
+                                {"position": "right", "name": "#right"}
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "layout": "anchor",
+                "columnWidth": 0.5,
+                "defaults": {
+                    "labelWidth": 240,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show root folder",
+                        "name": "showTreeRoot",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#resize panel",
+                        "name": "resizeTree",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show arrows",
+                        "name": "useTreeArrows",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#sort folders",
+                        "name": "sortTreeFolders",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show panel",
+                        "name": "showTree",
+                        "inputValue": 1,
+                        "checked": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "xtype": "fieldset",
+        "title": "#Files grid",
+        "layout": "column",
+        "items": [
+            {
+                "layout": "anchor",
+                "columnWidth": 0.5,
+                "defaults": {
+                    "labelWidth": 250,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show only files",
+                        "name": "showOnlyFiles",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#double click on folder/file",
+                        "name": "dblClick",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show lines between columns",
+                        "name": "showGridColumnLines",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show lines between lines",
+                        "name": "showGridRowLines",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#line alternation",
+                        "name": "stripeGridRows",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show icons",
+                        "name": "showGridIcons",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#show popup menus",
+                        "name": "showPopupMenu",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "numberfield",
+                        "fieldLabel": "#number of files and folders per page",
+                        "labelWidth": 220,
+                        "name": "gridPageSize",
+                        "width": 295,
+                        "minValue": 50,
+                        "maxValue": 1000,
+                        "value": 1000
+                    }
+                ]
+            },
+            {
+                "layout": "anchor",
+                "columnWidth": 0.5,
+                "defaults": {
+                    "labelWidth": 240,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "displayfield",
+                        "fieldLabel": "#Show columns",
+                        "ui": "parameter"
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#column \"Size\"",
+                        "name": "showSizeColumn",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#column \"Type\"",
+                        "name": "showTypeColumn",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#column \"MIME\"",
+                        "name": "showMimeTypeColumn",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#column \"Permissions\"",
+                        "name": "showPermissionsColumn",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#column \"Access time\"",
+                        "name": "showAccessTimeColumn",
+                        "inputValue": 1,
+                        "checked": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#column \"Change time\"",
+                        "name": "showChangeTimeColumn",
+                        "inputValue": 1,
+                        "checked": true
+                    }
+                ]
+            }
+        ]
+    }
+]
