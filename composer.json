@@ -1,13 +1,7 @@
 {
     "name": "gearmagicru/gm-be-filemanager",
     "description": "Control Panel module \"File manager\"",
-    "keywords": [
-        "gm",
-        "gearmagic",
-        "GM Panel",
-        "module",
-        "filemanager"
-    ],
+    "keywords": ["gearmagic", "gm-panel", "gm-component", "gm-module", "module", "filemanager"],
     "homepage": "https://apps.gearmagic.ru/component/gm-be-filemanager",
     "type": "component",
     "license": "MIT",
