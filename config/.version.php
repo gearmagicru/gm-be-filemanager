@@ -12,8 +12,8 @@
 return [
     'name'        => 'File manager',
     'description' => 'Manage files and folders in a server-side storage',
-    'version'     => '1.0',
-    'versionDate' => '20-12-2017',
+    'version'     => '1.0.1',
+    'versionDate' => '09-04-2025',
     'author'      => 'GearMagic',
     'authorUrl'   => 'https://gearmagic.ru',
     'email'       => 'anton.tivonenko@gmail.com',
