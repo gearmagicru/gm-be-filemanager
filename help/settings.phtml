@@ -18,43 +18,38 @@
     <p>Settings appear after pressing the button <b>"Settings"</b> toolbar list (grid) of files and folders.</p>
     <h2>Form fields</h2>
     <ul class="g-help-list">
-        <li><b>Root folder ID.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Base path.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Base URL.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show folders without access.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show VCS files.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show files and folders with a dot.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Root folder identifier.</b> The identifier is a component for all identifiers of child folders of the tree;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Basic path.</b> Absolute path to the root folder of the tree. You can specify a path or an alias;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Base URL.</b> Used for previewing images and must match the base path. A URL or alias can be specified;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show folders without access.</b> The list / grid will show folders without access if the flag is set.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show VCS files.</b> Version control systems files will be shown if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show files and folders with a dot.</b> Files and folders with a dot (in Unix-like systems, it is common to denote a hidden file attribute) at the beginning of the name will be shown if the flag is set.</li>
     </ul>
 
     <h2>Set of fields "Folder tree panel"</h2>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and
-has the following fields:</p>
     <ul class="g-help-list">
-        <li><b>Show folder icons.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show system folder icons.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show toolbar.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Number of folders to expand.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Panel size, px.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Panel position.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show root folder.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Resize panel.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show arrows.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Sort folders.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show panel.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show folder icons.</b> Icons will be displayed on all folders if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show system folder icons.</b> Icons will be displayed on system folders if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show toolbar.</b> The folder tree toolbar will be displayed if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Count of folders to open.</b> The count of folders that will be shown when a folder is expanded to a higher level. Default is 1000;</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Panel size, px.</b> Width of the tree panel in pixels. Default is 300 pixels;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Panel position.</b> The tree panel position relative to the file panel: "left", "right". Default is "left";</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show root folder.</b> The root folder will be displayed as the first collapsed folder in the folder tree panel if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Resize the panel.</b> Ability to change the width of the panel using the cursor.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show arrows.</b> If the flag is set, arrows will be displayed opposite the expanding tree nodes (folders). Arrows allow you to expand or collapse a tree node (folder);</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Sort folders.</b> Sorts folders by name if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show panel.</b> The folder tree panel will be visible if the flag is set.</li>
     </ul>
 
     <h2>Set of fields "File display grid"</h2>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and
-has the following fields:</p>
     <ul class="g-help-list">
-        <li><b>Show files only.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Double click on a folder / file.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show lines between columns.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show lines between lines.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Line alternation.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show icons.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show popup menus.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Number of elements per page.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Show columns.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show files only.</b> If the flag is set, then only files will be displayed in the list/grid, and folders will be hidden;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Double click on folder/file.</b> If the flag is set, double-clicking will view the folder or file;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show lines between columns.</b> Lines between columns are displayed in the grid if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show lines between lines.</b> Lines between rows are displayed in the grid if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Alternating lines.</b> The grid will display rows with alternating background colors, similar to a "zebra effect", if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show icons.</b> The list / grid will show file icons if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Show popup menus.</b> A popup menu will appear above each list/grid item on hover if the flag is set;</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Count of elements per page.</b> Specifies the number of items (files, folders) to display on one list / grid page. Default is 1000.</li>
     </ul>
 </article>
